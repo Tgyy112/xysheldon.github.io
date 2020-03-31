@@ -11,8 +11,8 @@ As the Lecture Captures are my major learning material right now, following tabl
 |:-----|:-----|:-----|:-----|
 |Lecture Captures (Videos host on Mediasite)|MM_Transmission Line Theory|ZB_FIRST YEAR COMMS REVISION|**No nonplus so far**|
 |Lecture Slides|*In sync with lecture captures*|19_amps_part2|**No nonplus so far**|
-|ADS Screencast Tutorials for CAD Sheets|***<u>Not started yet</u>***|Cad4p1|**No nonplus so far**|
-|PowerPoint Screencasts of the Lectures (in Learning Resources)|1_Satellite TV and LNBs|13_Digital communications I and Q in transceivers|The Screencasts are not compulsory, and some contents are covered in Lecture Captures.|
+|ADS Screencast Tutorials for CAD Sheets|Cad2p1|Cad4p1|**No nonplus so far**|
+|PowerPoint Screencasts of the Lectures (in Learning Resources)|1_Satellite TV and LNBs|13_Digital communications I and Q in transceivers|The Screencasts are not compulsory, and some contents are covered in Lecture Captures. ***Planned for Revision.***|
 |Lab|***<u>Not started yet</u>***|Lab 5 TRL Resonator|***<u>Not pragmatic now</u>***|
 
 ## Detailed Progress
