@@ -10,7 +10,8 @@ layout: default
 
 # Learning Log
 ## [XJEL2140 Learning Tracking](./XJEL2140/XJEL2140_Contents.html)
-Clink link above to track my XJEL/ELEC2140 learning~~~
+#### Clink link above to track my XJEL/ELEC2140 learning~~~
+
 ***
 &nbsp;
 
