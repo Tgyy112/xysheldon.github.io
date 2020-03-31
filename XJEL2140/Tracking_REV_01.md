@@ -17,7 +17,6 @@ As the Lecture Captures are my major learning material right now, following tabl
 |PowerPoint Screencasts of the Lectures (in Learning Resources)|1_Satellite TV and LNBs|13_Digital communications I and Q in transceivers|The Screencasts are not compulsory, and some contents are covered in Lecture Captures.|
 |Lab|***<u>Not started yet</u>***|Lab 5 TRL Resonator|***<u>Not pragmatic now</u>***|
 
-
---------------
+***
 # Subscribe
 ###  You can receive latest update here: [XJEL2140 Learning Tracking](./XJEL2140_Contents.html)
