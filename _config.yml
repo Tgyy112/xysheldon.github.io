@@ -1,4 +1,5 @@
 theme: jekyll-theme-minimal
-title: XYSheldon's Static Info Publish Page
+logo: /assets/img/LOGO.png
+title: XYS's Static Info Publish Page
 description: The pages under this directory are used to publish misc information.
 show_downloads: false
