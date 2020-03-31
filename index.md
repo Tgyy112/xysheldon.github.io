@@ -1,12 +1,14 @@
 ---
 layout: default
 ---
+# About me
+![Linkedin](./assets/img/linkedin_banner.png)
+### [My Github Profile](https://github.com/XYSheldon)
+### [My Linkedin Profile](https://www.linkedin.com/in/yanshan-xie/)
 
-There should be whitespace between paragraphs.
-
-# [XJEL2140 Learning Tracking](./XJEL2140/XJEL2140_Contents.html)
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+# Learning Log
+## [XJEL2140 Learning Tracking](./XJEL2140/XJEL2140_Contents.html)
+Clink link above to track my XJEL/ELEC2140 learning~~~
 
 # Demo Pages / Demo Docs
 
