@@ -150,4 +150,4 @@ To steer the wave, use *bulb & parabollic reflector*
 > 5_radioTXRX_part1_done.ppt  
 > CC_Transmitters-Receivers Part1
 
-`TODO: Add more notes`                                                                                                                                                                                                                                                                                                                                                                
+`TODO: Add more notes`
