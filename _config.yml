@@ -2,3 +2,4 @@ theme: jekyll-theme-minimal
 title: XYS's Static Publish
 description: This Document/Page is generated automatically via Github.io.
 show_downloads: false
+markdown: kramdown

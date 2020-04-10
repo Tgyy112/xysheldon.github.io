@@ -46,7 +46,7 @@ As the Lecture Captures are my major learning material right now, following tabl
 - [x] 2_SMITH CHART PROGRAMME DEMO.wmv
 - [x] 3_TheBigFilterMovie.wmv
 - [x] 3_filtermoviemp4_720p.mp4
-- [x] 4_Transmitters and receivers part1_EvenBiggerReceiversMovie.mp4
+- [x] 4_Transmitters and receivers part1 EvenBiggerReceiversMovie.mp4
 - [x] 5_Image problem and digital multiplexes.mp4
 - [x] 6_Parasitics in Ls and Cs.mp4
 - [x] 7_Transmission line types.mp4
