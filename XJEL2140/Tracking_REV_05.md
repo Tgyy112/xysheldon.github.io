@@ -1,5 +1,6 @@
 ---
 layout: default
+katex: true
 ---
 # <center>XJEL/ELEC2140 Learning Tracking</center>
 ## <center>Yanshan Xie 201199596 2017110397</center>
@@ -95,7 +96,6 @@ To steer the wave, use *bulb & parabollic reflector*
 > The Unit:
 > ## `dBi`  
 > `i` refers to *isotropic*  
-> 
 > ## $G(dBi)=10 \log (\eta \frac{\pi^2 D^2}{\lambda^2})$
 
 # Note of BB
