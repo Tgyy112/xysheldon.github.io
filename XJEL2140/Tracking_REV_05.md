@@ -117,16 +117,16 @@ The Unit:
 3. Superheterodyne(***`adj. 超外差的`***) receiver
     * Mixing
     * Picking up weak signals (recover)
+4. Pulses on long transmission lines
+    > [!IMPORTANT]
+    > Reflections
+5. Transmission lines as resonators
 
 > **Microwaves:**  
 > Waves guided by metal conductors.  
 > e.g. Coaxial cables; Hollow waveguides; Microstrips
 
-4. Pulses on long transmission lines
-    > [!IMPORTANT]
-    > Reflections
-5. Transmission lines as resonators
-   
+
 ## Keysight Agilent ADS
 * Circuit simulations
   * Frequency domain linear analysis
