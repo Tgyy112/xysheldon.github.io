@@ -19,3 +19,6 @@ GPATH
 
 # VS Code Settings
 .vscode/
+
+# Jekyll site
+_site/

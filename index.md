@@ -16,4 +16,5 @@ layout: default
 &nbsp;
 
 # Demo Pages / Demo Docs
-[Link to Demo Page](./demopage.html).
+[Link to Demo Page (Default)](./demopage.html).
+[Link to Demo Page (Post)](./demopost.html).
