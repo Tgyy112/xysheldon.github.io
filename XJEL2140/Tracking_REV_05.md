@@ -96,10 +96,12 @@ Omnidirectional = *isotropic*
 To steer the wave, use *bulb & parabollic reflector*
 
 
-> The Unit:
-> ## `dBi`  
+The Unit:
+<center><p style="font-size:18pt;">dBi</p></center>
+
 > `i` refers to *isotropic*  
 > $$G(dBi)=10 \log (\eta \frac{\pi^2 D^2}{\lambda^2})$$
+
 
 &nbsp;  
 &nbsp;  
@@ -115,9 +117,11 @@ To steer the wave, use *bulb & parabollic reflector*
 3. Superheterodyne(***`adj. 超外差的`***) receiver
     * Mixing
     * Picking up weak signals (recover)
+
 > **Microwaves:**  
 > Waves guided by metal conductors.  
 > e.g. Coaxial cables; Hollow waveguides; Microstrips
+
 4. Pulses on long transmission lines
     > [!IMPORTANT]
     > Reflections
