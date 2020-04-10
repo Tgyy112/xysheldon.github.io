@@ -93,15 +93,21 @@ Omnidirectional = *isotropic*
 
 To steer the wave, use *bulb & parabollic reflector*
 
+
 > The Unit:
 > ## `dBi`  
 > `i` refers to *isotropic*  
-> $$ G(dBi)=10 \log (\eta \frac{\pi^2 D^2}{\lambda^2}) $$
+> $G(dBi)=10 \log (\eta \frac{\pi^2 D^2}{\lambda^2})$
+
 
 # Note of BB
+
+
 > ### *Relevent Materials:*
 > 2_Lab_intro.pptx  
 > BB_Lab summary
+
+
 ## Lab
 1. LCR Filters
 2. LC Resonator & CAD1
@@ -144,4 +150,4 @@ To steer the wave, use *bulb & parabollic reflector*
 > 5_radioTXRX_part1_done.ppt  
 > CC_Transmitters-Receivers Part1
 
-`TODO: Add more notes`
+`TODO: Add more notes`                                                                                
