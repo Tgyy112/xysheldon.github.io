@@ -60,7 +60,9 @@ As the Lecture Captures are my major learning material right now, following tabl
 
 ***
 
-# Note of AA
+&nbsp;  
+&nbsp;  
+# Note of *Introduction*
 > ### *Relevent Materials:*
 > 1d_Intro_done.ppt  
 > AA_Introduction - applications
@@ -99,22 +101,21 @@ To steer the wave, use *bulb & parabollic reflector*
 > `i` refers to *isotropic*  
 > $$G(dBi)=10 \log (\eta \frac{\pi^2 D^2}{\lambda^2})$$
 
-
-# Note of BB
-
+&nbsp;  
+&nbsp;  
+# Note of *Lab Summary*
 
 > ### *Relevent Materials:*
 > 2_Lab_intro.pptx  
 > BB_Lab summary
 
-
 ## Lab
 1. LCR Filters
 2. LC Resonator & CAD1
-3. Superheterodyne(`adj. 超外差的`) receiver
+3. Superheterodyne(***`adj. 超外差的`***) receiver
     * Mixing
     * Picking up weak signals (recover)
-> ## Microwaves:  
+> **Microwaves:**  
 > Waves guided by metal conductors.  
 > e.g. Coaxial cables; Hollow waveguides; Microstrips
 4. Pulses on long transmission lines
@@ -144,10 +145,11 @@ To steer the wave, use *bulb & parabollic reflector*
 
 > Standard 50Ohms: Characteristic impedances of cables
 
-
-# Note of CC
+&nbsp;  
+&nbsp;  
+# Note of *Transmitters&Receivers Part 1*
 > ### *Relevent Materials:*
 > 5_radioTXRX_part1_done.ppt  
 > CC_Transmitters-Receivers Part1
 
-`TODO: Add more notes`
+# `TODO: Add more notes`
