@@ -9,13 +9,13 @@ You can receive latest update here: [XJEL2140 Learning Tracking](./XJEL2140_Cont
 
 As the Lecture Captures are my major learning material right now, following table are filled.
 
-| Source / Materials | Current Progress | Latest | Feedback & Note |
+| Source / Materials | Current Progress | Feedback & Note |
 |:-|:-|:-|:-|
-| Lecture Captures (Videos host on Mediasite) |OO_Mobile Phone and RFIC | ZB_FIRST YEAR COMMS REVISION | **No nonplus so far** |
-| Lecture Slides | *In sync with lecture captures* | 19_amps_part2 | **No nonplus so far** |
-| ADS Screencast Tutorials for CAD Sheets | Cad2p1 | Cad4p1 | **No nonplus so far** |
-| PowerPoint Screencasts of the Lectures (in Learning Resources) | 8_Reflections, Standing Waves, Transmission Line Resonators | 13_Digital communications I and Q in transceivers | The Screencasts are not compulsory, and some contents are covered in Lecture Captures. ***Planned for Revision.*** |
-| Lab | ***<u>Not started yet</u>*** | Lab 5 TRL Resonator | ***<u>Not pragmatic now</u>*** |
+| Lecture Captures (Videos host on Mediasite) |OO_Mobile Phone and RFIC | **No nonplus so far** |
+| Lecture Slides | *In sync with lecture captures* | **No nonplus so far** |
+| ADS Screencast Tutorials for CAD Sheets | Cad2p1 | **No nonplus so far** |
+| PowerPoint Screencasts of the Lectures (in Learning Resources) | 8_Reflections, Standing Waves, Transmission Line Resonators | The Screencasts are not compulsory, and some contents are covered in Lecture Captures. ***Planned for Revision.*** |
+| Lab | ***<u>Not started yet</u>*** | ***<u>Not pragmatic now</u>*** |
 
 ## Detailed Progress
 ### Lecture Captures (Videos host on Mediasite)
