@@ -23,7 +23,7 @@ As the Lecture Captures are my major learning material right now, following tabl
 - [x] [BB_Lab summary](#2)
 - [x] [CC_Transmitters-Receivers Part1](#3)
 - [x] [DD_Transmitters-Receivers Part2 (image etc)](#4)
-- [x] EE_Filters Part 1 50ohms & Intro
+- [x] [EE_Filters Part 1 50ohms & Intro](#5)
 - [x] FF_Filters Part 2 Poles & Zeros, Butterworth/Chebyshev
 - [x] GG_Lumped element filter design method
 - [x] HH_Parasitics of lumped elements
@@ -233,5 +233,165 @@ Tune the frequency can be easily achieved by changing the factor of **digital di
 > ### *Relevent Materials:*
 > 6_radioTXRX_part2_done.ppt  
 > DD_Transmitters-Receivers Part2 (image etc)
-> 
+
+## Image Problem
+
+![Image Problem](4/ImageProblem.png)
+### Negative Frequency
+Any signal at 88 MHz will also mix down to 1 MHz and pass through the IF filter.
+
+To releviate the problem, a RF filter is introduced before the mixer (**Image Filter**).
+
+## Double Conversion Receiver
+![Double Stage](4/DoubleStage.png)
+
+## Key Points
+  - Fractional Bandwidth (i.e. frequency&uarr;;Bandwidth&darr;)
+  - Mixing : Sum and Difference frequencies
+  - [Superheterodyne Diagram](#superheterodyne-receiver) & Operation
+  - Tunning Local Oscillator (Quartz Reference) to select
+
+## Digital Data Sidelobes
+The sharp digital data need **infinite high frequency** to recover.
+![Digital Data](4/DigitalData.png)
+
+To limit the bandwidth, filters used.
+![Analogue of Digital Data](4/AnalogueDigitalData.png)
+
+- Still only interested in "1" or "0" level, so noise is rejected
+- Sharp corners are rounded to limit the RF signal to a small bandwidth
+- Filters, often use DSP chips
+![DSP solve Image](4/DSPforImage.png)
+
+
+## Phase Modulation
+![PSK](4/PSK.png)
+
+Using the phase to represent "1" and "0" means the modulated signal uses less bandwidth for a certain data rate.
+
+- Used in high quality digital links
+- Less sensitive to noise
+- Better *spectral efficiency* (bits/secend/Hz)
+  
+### Quaternary Phase Shift Keying (QPSK)
+4 phases states: 0&deg; 90&deg; 180&deg; 270&deg;  
+
+Transmitter used in phone system:
+![IQ Transmistter](4/IQTransmitter.png)
+
+
+### 16-QAM (Quadrature Amplitude Modulation)
+The Constellation (调制星座图):
+
+![16-QAM](4/16-QAM.png)
+## But Higher bits/symbol &Rarr; Lower resistance to noise!!!
+
+## Software Radio
+AD or DA chips can not directly placed at the antenna!
+To be realistic, AD or DA are operating at Intermediate Frequency or Baseband.
+This gives AD/DA conversion much **higher dynamic range** and much **less demanding specifications**
+
+## Direct Conversion Architectures (homodyne 零差)
+Carrier Frequency = Frequency of Local Oscillator (receiver)
+
+Pros:
+- Digital Circuits *directly applied* to baseband signals
+- Lower component count and cost
+- Flexibility
+  - Different data rates; modulation schemes; services; future upgradation
+
+
+Cons:
+- Higher DC power
+
+![Direct Conversion](4/DirectConversion.png)
+
+&nbsp;  
+&nbsp;  
+<h2 id="5"></h2>
+
+# Note of *RF Filters Part 1*
+> ### *Relevent Materials:*
+> 8_FILTS_part1_50Ohms_done.ppt  
+> Filters Part 1 50ohms & Intro
+
+> ## A transducer for separating waves on the basis of their frequencies.
+
+## Transmission Lines
+![TransLines](5/TransLines.png)
+- Low loss
+- Shield
+  - Preventing signal leaking
+  - Rejecting electrical interference
+- The signal is confined (***GUIDED***) by conductors  
+- ## <center>Waves</center>
+
+### eg: Coaxial Cable (同轴线缆)
+
+## Impedance Match
+![Impedance Match](5/ImpedanceMatch.png)
+
+Unless the amplifiers are matched to the characteristic impedance (**50 &Omega;**) of the cables and conntectors;
+
+**Reflections** are created between components.
+
+## S-Parameters
+> [**Scattering parameters** or **S-parameters**](https://en.wikipedia.org/wiki/Scattering_parameters) (the elements of a scattering matrix or S-matrix) describe the electrical behavior of linear electrical networks when undergoing various steady state stimuli by electrical signals.  
+> S-parameters are mostly used for networks operating at radio frequency (RF) and microwave frequencies where signal power and energy considerations are more easily quantified than currents and voltages.  
+> An example: The S-parameter matrix for the 2-port network
+![TwoPortNetworkScatteringAmplitudes](5/TwoPortNetworkScatteringAmplitudes.png)
+>   
+> $$\begin{pmatrix} b_1 \\ b_2 \end{pmatrix}\ = \begin{pmatrix} S_{11} & S_{12} \\ S_{21} & S_{22} \end{pmatrix}\ \begin{pmatrix} a_1 \\ a_2 \end{pmatrix}$$  
+>   
+> $$S_{11}$$ is the input port voltage reflection coefficient  
+> $$S_{12}$$ is the reverse voltage gain  
+> $$S_{21}$$ is the forward voltage gain  
+> $$S_{22}$$ is the output port voltage reflection coffeicient  
+
+#### **S-parameters change with the measurement frequency**, 
+so frequency must be specified for any S-parameter measurements stated, in addition to the characteristic impedance or system impedance.
+## Practical L-C Filter Design (Lowpass)
+![LPFilter](5/LPFilter.png)
+
+Power in dB: $$ 10 \log(A) $$  
+$$ P = \frac{U^2}{R} $$  
+Voltage in dB: $$ 20 \log(A) $$  
+
+<center>&darr;</center>
+
+Gain in dB: $$ 20 \log\vert S_{21}\vert $$  
+Return in dB: $$ 20 \log\vert S_{11}\vert $$  
+
+### Particularly for **losses passive network**:
+
+$$ {\vert S_{21}\vert}^2 + {\vert S_{11}\vert}^2 = 1 $$
+
+## dBm
+分贝毫瓦 decibel relative to one milliwatt, is an absolute value! not relative!  
+
+$$ P(mW) = (1 mW) 10^{x/10}$$  
+
+$$ x(dBm) = 10\log(P/(1mW))$$
+
+$$ 1\quad Watt = 30\quad dBm $$
+
+
+## Filter Types
+- Ideal Lowpass Filter (brickwall filter) **Cannot be obtained**
+- Butterworth (Maximally Flat)
+  - $$ \vert H(j\omega)\vert = \frac{1}{\sqrt{1+(\frac{\omega}{\omega_0})^{2n}}} $$
+- Chebyshev (ripples in passband)
+
+## Practical L-C Filter Design
+
+- Lowpass
+  - ![LPLC](5/LPLC.png)
+- Highpass
+  - ![HPLC](5/HPLC.png)
+- Bandpass (use effects of Resonator)
+  - ![BPLC](5/BPLC.png)
+- Bandstop (use effects of Resonator)
+  - ![BTLC](5/BTLC.png)
+
+
 # `TODO: Add more notes`
