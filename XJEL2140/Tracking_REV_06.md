@@ -24,8 +24,8 @@ As the Lecture Captures are my major learning material right now, following tabl
 - [x] [CC_Transmitters-Receivers Part1](#3)
 - [x] [DD_Transmitters-Receivers Part2 (image etc)](#4)
 - [x] [EE_Filters Part 1 50ohms & Intro](#5)
-- [x] FF_Filters Part 2 Poles & Zeros, Butterworth/Chebyshev
-- [x] GG_Lumped element filter design method
+- [x] [FF_Filters Part 2 Poles & Zeros, Butterworth/Chebyshev](#6)
+- [x] [GG_Lumped element filter design method](#7)
 - [x] HH_Parasitics of lumped elements
 - [x] II_Introduction to transmission lines
 - [x] IX_Reflections and Transmission Line Resonators
@@ -313,7 +313,7 @@ Cons:
 # Note of *RF Filters Part 1*
 > ### *Relevent Materials:*
 > 8_FILTS_part1_50Ohms_done.ppt  
-> Filters Part 1 50ohms & Intro
+> EE_Filters Part 1 50ohms & Intro
 
 > ## A transducer for separating waves on the basis of their frequencies.
 
@@ -382,16 +382,216 @@ $$ 1\quad Watt = 30\quad dBm $$
   - $$ \vert H(j\omega)\vert = \frac{1}{\sqrt{1+(\frac{\omega}{\omega_0})^{2n}}} $$
 - Chebyshev (ripples in passband)
 
+
+&nbsp;  
+&nbsp;  
+<h2 id="6"></h2>
+
+# Note of *RF Filters Part 2*
+> ### *Relevent Materials:*
+> 9_FILTS_part2_lumped_done.ppt  
+> FF_Filters Part 2 Poles & Zeros, Butterworth/Chebyshev
+
+## Transfer Function
+
+A simple example of Lowpass RC filter
+ 
+$$ V_{out}=\frac{1/j\omega C}{R+1/j\omega C}V_{in} =  \frac{1}{1+j\omega CR}V_{in} $$
+
+$$ H(s)=\frac{1/sC}{R+1/sC}= \frac{1}{1+sCR} $$
+
+## s-Domain
+Wider range: step,impulse.sinusoid...  
+$$ s=\sigma +j \omega $$
+
+![sDomain](6/sDomain.png)
+
+## Impulse Response
+
+Impulse Signal: $$\delta(t)\qquad \mathcal{L}[\delta(t)]=1 $$
+
+$$ r(t)=\mathcal{L}^{-1}[1\times H(s)] $$
+
+## Poles and Zeros
+
+$$ H(s) = \frac{N(s)}{D(s)} = \frac{a_{p}s^{p}+a_{p-1}s^{p-1}+...+a_{1}s+a_{0}}{b_{q}s^{q}+b_{q-1}s^{q-1}+...+b_{1}s+b_{0}} $$  
+
+$$ = K \times \frac{(s+z_1)(s+z_2)...(s+z_n)}{(s+p_1)(s+p_2)...(s+p_n)} $$
+
+> $$ N(s) $$ and $$ D(s) $$ stand for the numerator and the denominator.
+
+Note that the poles and zeros are all in the complex s-domain.
+
+## Bode Plots
+> The **Bode Plot** is graphical technique for represeting transfer functions (both magnitude and phase) versus frequency.
+
+Note that each pole and zero can be *approximated by a straight line* when plotted on a log-log scale.  
+Each pole and zero is hence represented by a straight line with slope "**20dB per decade**" (either upwards or downwards).
+
+## Why "Brickwall" Filter is impossible
+> [Causal Filter 因果滤波器](https://en.wikipedia.org/wiki/Causal_filter) is a linear and time-invariant causal system (线性时不变且因果的系统). The word causal indicates that the filter output depends only on past and present inputs.  
+> A filter whose output also depends on future inputs is **non-causal**, whereas a filter whose output depends only on future inputs is anti-causal(反因果的).  
+> Systems (including filters) that are realizable (i.e. that operate in real time) **must be causal** because such systems cannot act on a future input.
+
+Because (in 'brickwall' case) the impulse response is found to have a signal at the output **BEFORE** the impulse function has been applied to the input.
+
+The impulse response:
+![Causal Filter](6/Causal.png)
+
+## Approximations
+In reality, we may only approximate the ideal characteristics within a certain prescribed error.
+
+### 3 main filter types
+1. Butterworth (Maximally Flat)
+2. Chebyshev (Equi-ripple)
+   - Sharper transition between the passband and the stopband
+   - equi-ripple in the passband
+3. Elliptic
+   - equi-ripple in both the passband and the stopband
+
+For Butterworth:
+
+$$ H(s) = \frac{1}{1+s^n} \text{where n is the order.}$$
+
+$$ \vert H(j\omega)\vert = \frac{1}{\sqrt{1+(\omega)^{2n}}} $$
+
+
+
+Poles diagrams at 3rd and 4th order:
+![Poles of Butterworth](6/PolesButterworth.png)
+
 ## Practical L-C Filter Design
 
 - Lowpass
-  - ![LPLC](5/LPLC.png)
+  - ![LPLC](6/LPLC.png)
 - Highpass
-  - ![HPLC](5/HPLC.png)
+  - ![HPLC](6/HPLC.png)
 - Bandpass (use effects of Resonator)
-  - ![BPLC](5/BPLC.png)
+  - ![BPLC](6/BPLC.png)
 - Bandstop (use effects of Resonator)
-  - ![BTLC](5/BTLC.png)
+  - ![BTLC](6/BTLC.png)
+
+&nbsp;  
+&nbsp;  
+<h2 id="7"></h2>
+
+# Note of *Lumped Element Filter Design Method*
+> ### *Relevent Materials:*
+> 10_filterdesignmethod_done.ppt  
+> GG_Lumped element filter design method
+
+## Keysight Function Generator
+In 50&ohm; impedance mode:  
+- 50&ohm; Source
+- Output *V*  
+- 50&ohm; Load
+- ### Thus *V/2* at terminals
+
+High-Z mode (Connect Oscilloscope probes):  
+- 50&ohm; Source  
+- Output *V*  
+- High-Z (impedance) Load
+- ### Thus *V* at terminals
+
+<h2 style="color:#3F51B5;">Design Procedure</h2>
+
+1. <p style="color:#009688;">Choose Filter Order and Type (选型)</p>
+2. <p style="color:#009688;">Read off 'prototype' values (查表)</p>
+3. <p style="color:#009688;">Transform the network (转换电路 excluded LP)</p>
+4. <p style="color:#009688;">Denomalize (去标准化)</p>
+
+
+<h2 style="color:#C2185B;">IMPORTANT Keys x 3:</h2>
+
+1. $$\omega = 2\pi f$$
+2. $$\omega = 2\pi f$$
+3. $$\omega = 2\pi f$$
+4. For Highpass, Bandpass, Bandstop filters, the network **MUST** be transformed **BEFORE** denormalizing
+5. For Highpass, Bandpass, Bandstop filters, the network **MUST** be transformed **BEFORE** denormalizing
+6. For Highpass, Bandpass, Bandstop filters, the network **MUST** be transformed **BEFORE** denormalizing
+
+## 'Prototype' Filter
+
+Start with a lowpass filter which realises the required Butterworth/Chebyshev transfer function.
+
+The component values are normalized to
+- an angular frequency of 1 rad/s
+- impedance of 1 Ω
+
+![Prototype Filter](7/prototype.png)
+
+## Denormalize
+For Highpass, Bandpass, Bandstop filters, the network **MUST** be transformed **BEFORE** denormalizing
+
+$$ L_k = \frac{\text{normalized value}_k \times R}{\omega_c} $$  
+
+$$ C_k = \frac{\text{normalized value}_k }{\omega_c \times R} $$
+
+<h2 style="color:#ffb300;">Example 1: An simple Lowpass filter</h2>
+
+- 3rd order (n=3)
+- Butterworth
+- Lowpass filter
+- for 50Ω system
+- f<sub>cut-off</sub>=10MHz
+- use a series element first
+
+1. General 3rd order lowpass prototype filter
+    - ![Ex1Prototype](7/Ex1Prototype.png)
+2. Read off normalized values
+    - ![Ex1Butterworth](7/Ex1Butterworth.png)
+    - then, Fill the values (g)
+    - ![Ex1gValues](7/Ex1gValues.png)
+3. <text style="color:#ef5350;">Transfer networks (not needed for Lowpass filter)</text>
+4. Denomalize
+    - $$ L_1 = \frac{\text{normalized value}_1 \times R}{\omega_c} = \frac{1\times 50}{2\pi\times10\times10^6}H=796nH$$ 
+    - $$ C_2 = \frac{\text{normalized value}_2 }{\omega_c \times R} = \frac{2}{2\pi\times10\times10^6\times R}F=637pF $$
+
+## Lowpass ↠ Highpass/Bandpass/Bandstop Transformation
+
+|Lowpass ↠|Highpass|Bandpass|Bandstop|
+|:---------:|:---------:|:---------:|:---------:|
+|$$\omega$$|$$\frac{1}{\omega}$$|$$\frac{1}{\Delta}(\frac{\omega}{\omega_o}-\frac{\omega_o}{\omega})$$|$$\frac{\Delta}{(\frac{\omega}{\omega_o}-\frac{\omega_o}{\omega})}$$|
+|<img style="width:75px" src="7/LP.png" alt="LP">|<img style="width:75px" src="7/HP.png" alt="HP">|<img style="width:75px" src="7/BP.png" alt="BP">|<img style="width:75px" src="7/BT.png" alt="BT">|
+|Origin|Mirror Image|DC Shift Up|Mirror Image + DC Shift Up|
+|Original LOWPASS Element|HIGHPASS Element|BANDPASS Element|BANDSTOP Element|
+|$$j\omega L$$|$$\frac{1}{j\omega C}$$|         |         |
+|![L](7/Inductor.png) $$ g_k $$|![C](7/Capacitor.png) $$ \frac{1}{g_k} $$|![LC](7/LC.png) $$ L:\frac{g_k}{\Delta}\quad C:\frac{\Delta}{g_k}$$|![LCparallel](7/LCparallel.png) $$ L:{g_k}{\Delta}\quad C:\frac{1}{g_k \Delta}$$|
+|![CGND](7/CapacitorGND.png) $$ g_k $$|![LGND](7/InductorGND.png) $$ \frac{1}{g_k} $$|![LCparallelGND](7/LCparallelGND.png) $$ L:\frac{\Delta}{g_k}\quad C:\frac{g_k}{\Delta}$$|![LCGND](7/LCGND.png) $$ L:\frac{1}{g_k \Delta}\quad C:{g_k}{\Delta}$$|
+
+where the **fractional bandwidth**:
+
+$$\Delta=\frac{\omega_2-\omega_1}{\omega_o}$$
+
+the **geometric mean / center frequency**:
+
+$$\omega_o=\sqrt{\omega_1 \omega_2}$$
+
+<h2 style="color:#ffb300;">Example 2: An simple Lowpass filter</h2>
+
+- 3rd order (n=3)
+- Butterworth
+- Bandpass L-C lumped element filter
+- for 50Ω system
+- with a passband between 450kHz and 460kHz
+- use a series element first
+
+1. General 3rd order lowpass prototype filter
+    - ![Ex1Prototype](7/Ex1Prototype.png)
+2. Read off normalized values
+    - ![Ex1Butterworth](7/Ex1Butterworth.png)
+    - then, Fill the values (g)
+3. <text style="color:#ef5350;">Transfer networks</text>
+    - ![Ex2gValues](7/Ex2gValues.png)
+    - $$\omega_o=\sqrt{\omega_1 \omega_2} = 2\pi\sqrt{\omega_1 \omega_2} = 2858677 rad/s$$
+    - $$\Delta=\frac{\omega_2-\omega_1}{\omega_o} = \frac{2\pi(\omega_2 - \omega_1)}{2858677} = 0.02198$$
+    - ![Ex2Calulated](7/Ex2Caluated.png)
+4. Denomalize
+    - $$ L_1 = \frac{\text{normalized value}_1 \times R}{\omega_c} = \frac{45.5\times 50}{2858677}H = 796\mu H$$ 
+    - $$ C_1 = \frac{\text{normalized value}_1 }{\omega_c \times R} = \frac{0.02198}{2858677 \times 50}F=154pF $$
+   -  $$ L_2 = \frac{\text{normalized value}_2 \times R}{\omega_c} = \frac{0.01099\times 50}{2858677}H = 192nH$$ 
+    - $$ C_2 = \frac{\text{normalized value}_2 }{\omega_c \times R} = \frac{91}{2858677 \times 50}F=637pF $$
+
 
 
 # `TODO: Add more notes`
