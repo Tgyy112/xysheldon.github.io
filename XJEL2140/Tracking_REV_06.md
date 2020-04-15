@@ -590,7 +590,7 @@ $$\omega_o=\sqrt{\omega_1 \omega_2}$$
     - $$ L_1 = \frac{\text{normalized value}_1 \times R}{\omega_c} = \frac{45.5\times 50}{2858677}H = 796\mu H$$ 
     - $$ C_1 = \frac{\text{normalized value}_1 }{\omega_c \times R} = \frac{0.02198}{2858677 \times 50}F=154pF $$
    -  $$ L_2 = \frac{\text{normalized value}_2 \times R}{\omega_c} = \frac{0.01099\times 50}{2858677}H = 192nH$$ 
-    - $$ C_2 = \frac{\text{normalized value}_2 }{\omega_c \times R} = \frac{91}{2858677 \times 50}F=637pF $$
+    - $$ C_2 = \frac{\text{normalized value}_2 }{\omega_c \times R} = \frac{91}{2858677 \times 50}F=637nF $$
 
 
 
