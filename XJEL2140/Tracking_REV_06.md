@@ -567,7 +567,7 @@ the **geometric mean / center frequency**:
 
 $$\omega_o=\sqrt{\omega_1 \omega_2}$$
 
-<h2 style="color:#ffb300;">Example 2: An simple Lowpass filter</h2>
+<h2 style="color:#ffb300;">Example 2: An simple bandpass filter</h2>
 
 - 3rd order (n=3)
 - Butterworth
@@ -576,12 +576,12 @@ $$\omega_o=\sqrt{\omega_1 \omega_2}$$
 - with a passband between 450kHz and 460kHz
 - use a series element first
 
-1. General 3rd order lowpass prototype filter
+1. General 3rd order **LOWPASS** prototype filter
     - ![Ex1Prototype](7/Ex1Prototype.png)
 2. Read off normalized values
     - ![Ex1Butterworth](7/Ex1Butterworth.png)
     - then, Fill the values (g)
-3. <text style="color:#ef5350;">Transfer networks</text>
+3. <text style="color:#ef5350; font-size:16pt;">Transfer networks</text>
     - ![Ex2gValues](7/Ex2gValues.png)
     - $$\omega_o=\sqrt{\omega_1 \omega_2} = 2\pi\sqrt{\omega_1 \omega_2} = 2858677 rad/s$$
     - $$\Delta=\frac{\omega_2-\omega_1}{\omega_o} = \frac{2\pi(\omega_2 - \omega_1)}{2858677} = 0.02198$$
