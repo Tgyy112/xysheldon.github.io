@@ -4,7 +4,7 @@ katex: true
 ---
 # <center>XJEL/ELEC2140 Learning Tracking</center>
 ## <center>Yanshan Xie 201199596 2017110397</center>
-### <center>Timestamp: April 15th, 2020</center>
+### <center>Timestamp: April 17th, 2020</center>
 You can receive latest update here: [XJEL2140 Learning Tracking](./XJEL2140_Contents.html)
 
 As the Lecture Captures are my major learning material right now, following table are filled.
@@ -26,9 +26,9 @@ As the Lecture Captures are my major learning material right now, following tabl
 - [x] [EE_Filters Part 1 50ohms & Intro](#5)
 - [x] [FF_Filters Part 2 Poles & Zeros, Butterworth/Chebyshev](#6)
 - [x] [GG_Lumped element filter design method](#7)
-- [x] HH_Parasitics of lumped elements
-- [x] II_Introduction to transmission lines
-- [x] IX_Reflections and Transmission Line Resonators
+- [x] [HH_Parasitics of lumped elements](#8)
+- [x] [II_Introduction to transmission lines](#9)
+- [x] [IX_Reflections and Transmission Line Resonators](#10)
 - [x] JJ_Microstrip
 - [x] KK_Amplifiers Part 1 - Matching and stability
 - [x] LL_Amplifiers part2 - Noise and Distortion
@@ -592,6 +592,163 @@ $$\omega_o=\sqrt{\omega_1 \omega_2}$$
    -  $$ L_2 = \frac{\text{normalized value}_2 \times R}{\omega_c}\\ = \frac{0.01099\times 50}{2858677}H = 192nH$$ 
     - $$ C_2 = \frac{\text{normalized value}_2 }{\omega_c \times R}\\ = \frac{91}{2858677 \times 50}F=637nF $$
 
+&nbsp;  
+&nbsp;  
+<h2 id="8"></h2>
+
+# Note of *Parasitics of Practical Lumped Elements*
+> ### *Relevent Materials:*
+> 11_LC_Parasitics_done.ppt  
+> HH_Parasitics of lumped elements
+
+# Parasitics of Capacitor
+![Paracitics of Capacitor](8/ParasiticsCapacitor.png)
+
+# Parasitics of Inductor
+![Paracitics of Inductor](8/ParasiticsInductor.png)
+
+<h2 style="color:#ffb300;">What stops you making a higher and higher order filter that approaches the “brick wall” filter?</h2>
+Every L/C component has a self-resonant frequency, beyond which its behaviour is erratic.
+
+- Increased loss in the passband
+- Reduced rejection in the stop band
+- Reduced “sharpness” of transitions
+- Spurious (adj. 假的；伪造的；欺骗的) behaviour at high frequency
+- Shifts in the cut-off or centre frequency
+
+&nbsp;  
+&nbsp;  
+<h2 id="9"></h2>
+
+# Note of *Transmission Lines Introduction*
+> ### *Relevent Materials:*
+> 12_TRLs_intro.ppt  
+> II_Introduction to transmission lines
+
+## Analogy: Organ pipes
+Speed of Wave: $$V=f\lambda$$
+
+## Coaxial Lines
+
+Fields IMG!
+
+### Characteristic Impedance: 
+$$ Z_o=\sqrt{\frac{L}{C}}=\frac{377}{2\pi \sqrt{\varepsilon_r}}\ln(\frac{b}{a})\\
+\text{where: C is capacitance per unit length}\\
+\text{L is Inductance per unit length}$$
+
+### Features
+- Useable up to 110GHz, depending on type
+- Ideal for **wideband** compontents *(pure TEM field)*
+- Used in measurement equipment
+
+> **Micro Coax** for high speed digital data transmission.
+
+## Microstrip
+> Transmission line on PCB  
+> but for high frequencies, special 'PCB' materials are needed
+
+IMG!
+
+> microstrips are open circuit on both sides;  
+> Length of a microstrip: $$ \lambda_g /2$$
+
+### Features
+- **Losses are quite high** giving moderate performance
+- Useable up to 100GHz with suitable material
+- Fabricated with photomasks (PCB-Like etching), cheap and easy to make
+- Can solder on components
+- Can make filters and matching networks simply by 'drawing' them
+- The Ground plane takes care of itself
+
+### Field Pattern
+Since the structure is **not symmetrical**, the field pattern is not simple like coax.
+
+IMG!!!
+
+### L-C Equivalence: make filters and matching networks
+
+IMG!!!  
+
+The design of more advanced micostrip circuits (e.g. amplifilers) requires an understanding of
+<h3 style="color:#ef5350;">distributed circuits</h3>
+
+## Twisted Pairs(双绞线) & Lecher Line(勒谢尔线)
+> [Twisted pair cabling](https://en.wikipedia.org/wiki/Twisted_pair) is a type of wiring in which two conductors of a single circuit are twisted together for the purposes of **improving electromagnetic compatibility**. Compared to a single conductor or an untwisted balanced pair, a twisted pair **reduces electromagnetic radiation from the pair and crosstalk between neighboring pairs and improves rejection of external electromagnetic interference**. It was invented by Alexander Graham Bell.
+
+> In electronics, a [Lecher line or Lecher wires](https://en.wikipedia.org/wiki/Lecher_line) is a **pair of parallel wires or rods** that were used to **measure the wavelength of radio waves**, mainly at UHF and microwave frequencies. They form a short length of balanced transmission line (a resonant stub). When attached to a source of radio-frequency power such as a radio transmitter, the radio waves form standing waves along their length.  
+> Commercially available **300 and 450 ohm** twin lead balanced ribbon(n. 带；缎带；带状物；) feeder can be used as a fixed length Lecher line (resonant stub).
+
+IMG!!!
+
+### Features
+- Minimal confinement
+- Lower frequencies only
 
 
-# `TODO: Add more notes`
+## Hollow Waveguide [(空腔波导管)](https://en.wikipedia.org/wiki/Waveguide_(radio_frequency))
+
+IMG!!!
+
+### Features
+- **Low loss, high power**
+- Useable from about 1GHz to 325GHz
+- Complex non-TEM fields
+
+### Rectangular Waveguide (Particular Case)
+Single Metal Pipe;  
+Can not transmit DC as there is no return path for current
+Cut-off frequency: when the width is a half wavelength
+
+IMG!!!
+
+> The electromagnetic waves in a (metal-pipe) waveguide may be imagined as travelling down the guide in a zig-zag path, being repeatedly reflected between opposite walls of the guide. For the particular case of rectangular waveguide, it is possible to base an exact analysis on this view. Propagation in a dielectric waveguide may be viewed in the same way, with the waves confined to the dielectric by total internal reflection at its surface.
+
+#### Analogy: Optical Fibre: Based on total internal reflection.
+
+IMG!!!
+
+The complex field pattern is the sum of a pair of waves, each reflecting off the matellic walls at the critical angle.
+
+IMG!!! IMG TE10!!!
+
+### Frequency bands
+A range of standard waveguide sizes is used to cover the whole microwave and millimetre-wave spectrum.
+
+&nbsp;  
+&nbsp;  
+<h2 id="10"></h2>
+
+# Note of *Transmission Lines Filters*
+> ### *Relevent Materials:*
+> 13_TRLs_filters.ppt  
+> IX_Reflections and Transmission Line Resonators
+
+## Analogy: Organ Pipe (Resonator)
+Acoustic Wave: 400Hz in ~200mm  
+Electromagnetic Wave: 375000000Hz in ~200mm  
+**Difference in wavelength is speed of waves propagation**
+
+## Analogy: Trumpet
+
+## Analogy: Pendulum
+Potential Energy &harr; Kinetic Energy  
+&rarr; Simple harmonic motion
+
+## LC Resonator
+Energy stored in magnetic field (Inductor)  
+<center>&harr;</center>  
+Energy stored in electric field (Capacitor)
+
+$$ fr = \frac{1}{2\pi \sqrt{LC}}$$
+
+Parallel LC = open circuit at resonance  
+Series LC = short circuit at resonance
+
+## Reflections in Trans-Line Resonators
+
+
+
+
+
+<center>TODO: Add more notes</center>
