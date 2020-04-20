@@ -727,28 +727,158 @@ A range of standard waveguide sizes is used to cover the whole microwave and mil
 ## Analogy: Organ Pipe (Resonator)
 Acoustic Wave: 400Hz in ~200mm  
 Electromagnetic Wave: 375000000Hz in ~200mm  
-**Difference in wavelength is speed of waves propagation**
+**Difference is speed of waves propagation**
 
-## Analogy: Trumpet
+## Analogy: String & Trombone Tuner & Trumpet
+Standing waves.
 
 ## Analogy: Pendulum
 Potential Energy &harr; Kinetic Energy  
-&rarr; Simple harmonic motion
+&Rarr; Simple harmonic motion
+> Mechanical Vibration: Quartz Crystal Oscillator
 
 ## LC Resonator
 Energy stored in magnetic field (Inductor)  
 <center>&harr;</center>  
 Energy stored in electric field (Capacitor)
 
-$$ fr = \frac{1}{2\pi \sqrt{LC}}$$
+$$fr = \frac{1}{2\pi \sqrt{LC}}$$
 
 Parallel LC = open circuit at resonance  
 Series LC = short circuit at resonance
 
+*Loading Effect*
+
 ## Reflections in Trans-Line Resonators
+Energies are stored in L/C. Energy does not disappear. When reach the 'terminals', it propagate back(REFLECTION).
+
+Reflection Coefficient: $$ \Gamma $$
+
+### 3 Special Cases
+
+|Open Circuit|Short Circuit|LOAD = $$Z_o$$|
+|---------|---------|---------|
+|CIRCUIT IMG!!!|CIRCUIT IMG!!!|CIRCUIT IMG!!!|
+|$$ \Gamma = +1$$|$$ \Gamma = -1$$|$$ \Gamma = 0$$|
+|mag 1, phase 0 degrees|mag 1, phase 180 degrees|mag 0, phase 0 degrees|
+|voltage waves|voltage waves|nothing reflected, a *matched* load|
+|IMG|IMG|IMG|
+
+### General Case
+CIRCUIT IMG!!!
+
+Reflection Coefficient:  
+
+$$ \Gamma = \frac{\text{reflected}}{\text{incident}}=\frac{Z_L - Z_o}{Z_L + Z_o}$$
+
+## Transmission Line Resonators
+
+### Analogy: Organ Pipe
+IMG!!!
+
+### (Open/Short) Quarter-Wavelength Resonator
+- One end **open circuit**
+- The other end **short circuit**
+
+CIRCUIT IMG!!!
+
+IMG!!!
+
+> e.g. Combline Filter(梳状线 滤波器): Mechanical Resonators, Adjust Gaps
+
+Blow too hard and you get harmonics.
+
+$$3\times \frac{\lambda_g}{4}$$
+
+IMG!!! WITH FREQUENCY with lumpped
+
+Lumped elements are unpredictable at High Frequencies.  
+Transmission Lines are predictable; Harmonics can be suppressed.
+
+### Analogy: Waveguide Cavity & Glass Bottle
+IMG!!!
+### (Short/Short) Half-Wavelength Resonator
+- **BOTH** ends are **short circuit**
+
+IMG!!!
+
+### (Open/Open) Half-Wavelength Resonator
+<center>MOST COMMONLY USED in microstrips.</center>
+
+- **BOTH** ends are **open circuit**
+
+IMG!!!
+
+### Microstrip Resonators
+
+IMG!!!
+
+Multiple Resonators coupled together give the desired Bandpass response:  
+But it is subtler than this implies because **the resonators load each other**
+
+- In all cases, the signal is coupled in and out through somthing like a hole in a ground plane, or a gap between signal conductors
+- It is important that the LOADED Q si not lowered too much by overcoupling
+- Ultimately, the loss in the transmission line determines the highest Q-factor that can be achieved
+
+
+!!!THREE IMGS!!!
+
+### Dimensions of Resonators
+
+$$v=f\times \lambda =\frac{c}{\sqrt{\varepsilon_r}}\\ \text{where the }\varepsilon_r\text{is the dielectric constant of microstrip material}$$
+
+Thus, to make a resonator small for given frequency, you need a low velocity.  
+This means a high dielectric constant material is required.
+i.e. $\quad\lambda\downarrow;v\downarrow;\varepsilon_r\uparrow$
+
+#### Example
+
+- Calculate the physical length of a quarter-wavelength coax resonator designed for 
+  - a) 10 GHz
+  - b) 10 MHz
+- with $\varepsilon_r=10\quad c=3\times10^8 m/s$
+
+Solution:
+- $v=\frac{c}{\sqrt{\varepsilon_r}}=9.4868E+07$
+  - a) $\lambda=v/f=0.00949 \\ \text{Physical length}=\lambda/4=0.00237 m$
+  - b) $\lambda=v/f=9.48683 \\ \text{Physical length}=\lambda/4=2.3717 m$
+
+## TEM Mode Dielectric Combline
+- Compact Size
+- Low Loss
+- Surface Mount
+- Low Cost
+  - These filters consist of short circuited stub resonators dielectrically loaded to reduce their size.
+  - TEM dielectric resonators can be coupled to produce miniature bandpass or bandreject filters which are much smaller than cavity filters and have lower loss than lumped element or microstrip filters.
+
+> [TEM(Transverse electromagnetic mode)](https://en.wikipedia.org/wiki/Waveguide_filter#Modes), a transmission mode where all the electric field and all the magnetic field are perpendicular to the direction of travel of the electromagnetic wave. This is the usual mode of transmission in pairs of conductors.
+
+## [Waveguide modes(EXTRA CONTENT)](https://en.wikipedia.org/wiki/Transverse_mode)
+
+Modes in waveguides can be further classified as follows:
+1. Transverse electromagnetic (TEM) modes
+   - Neither electric nor magnetic field in the direction of propagation.
+2. Transverse electric (TE) modes
+   - No electric field in the direction of propagation. These are sometimes called H modes because there is only a magnetic field along the direction of propagation (H is the conventional symbol for magnetic field).
+3. Transverse magnetic (TM) modes
+   - No magnetic field in the direction of propagation. These are sometimes called E modes because there is only an electric field along the direction of propagation.
+4. Hybrid modes
+   - Non-zero electric and magnetic fields in the direction of propagation.
+
+
+**Hollow metallic waveguides** filled with a homogeneous, isotropic material (usually air) support TE and TM modes but not the TEM mode.
+
+In **coaxial cable** energy is normally transported in the fundamental TEM mode.  
+The TEM mode is also usually assumed for most other electrical conductor line formats as well. This is mostly an accurate assumption, but a major exception is:
+
+**MICROSTRIP** which has a significant longitudinal component to the propagated wave due to the inhomogeneity at the boundary of the dielectric substrate below the conductor and the air above it.
+
+In an **optical fiber** or other dielectric waveguide, modes are generally of the hybrid type.
+
+In rectangular waveguides, rectangular mode numbers are designated by two suffix numbers attached to the mode type, such as TE<sub>mn</sub> or TM<sub>mn</sub>, where *m* is the number of half-wave patterns across the width of the waveguide and *n* is the number of half-wave patterns across the height of the waveguide.  
+In circular waveguides, circular modes exist and here *m* is the number of full-wave patterns along the circumference and *n* is the number of half-wave patterns along the diameter.
 
 
 
-
-
+---
 <center>TODO: Add more notes</center>
