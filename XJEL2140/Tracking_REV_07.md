@@ -626,11 +626,11 @@ Every L/C component has a self-resonant frequency, beyond which its behaviour is
 > II_Introduction to transmission lines
 
 ## Analogy: Organ pipes
-Speed of Wave: $$V=f\lambda$$
+Speed of Wave: $V=f\lambda$
 
 ## Coaxial Lines
 
-Fields IMG!
+![Coaxial Cable](9/CoaxialCable.png)
 
 ### Characteristic Impedance: 
 $$ Z_o=\sqrt{\frac{L}{C}}=\frac{377}{2\pi \sqrt{\varepsilon_r}}\ln(\frac{b}{a})\\
@@ -646,12 +646,14 @@ $$ Z_o=\sqrt{\frac{L}{C}}=\frac{377}{2\pi \sqrt{\varepsilon_r}}\ln(\frac{b}{a})\
 
 ## Microstrip
 > Transmission line on PCB  
-> but for high frequencies, special 'PCB' materials are needed
+> but for high frequencies, special 'PCB' materials are needed  
+> microstrips are **open circuit** on both sides;  
+> Length of a microstrip: $\lambda_g /2$
 
-IMG!
+### Field Pattern
+Since the structure is **not symmetrical**, the field pattern is not simple like coax.
 
-> microstrips are open circuit on both sides;  
-> Length of a microstrip: $$ \lambda_g /2$$
+![Microstrip](9/Microstrip.png)
 
 ### Features
 - **Losses are quite high** giving moderate performance
@@ -661,17 +663,12 @@ IMG!
 - Can make filters and matching networks simply by 'drawing' them
 - The Ground plane takes care of itself
 
-### Field Pattern
-Since the structure is **not symmetrical**, the field pattern is not simple like coax.
-
-IMG!!!
-
 ### L-C Equivalence: make filters and matching networks
 
-IMG!!!  
+![LCequi](9/LCequi.png)
 
 The design of more advanced micostrip circuits (e.g. amplifilers) requires an understanding of
-<h3 style="color:#ef5350;">distributed circuits</h3>
+<center style="color:#ef5350;font-size:16pt">distributed circuits</center>
 
 ## Twisted Pairs(双绞线) & Lecher Line(勒谢尔线)
 > [Twisted pair cabling](https://en.wikipedia.org/wiki/Twisted_pair) is a type of wiring in which two conductors of a single circuit are twisted together for the purposes of **improving electromagnetic compatibility**. Compared to a single conductor or an untwisted balanced pair, a twisted pair **reduces electromagnetic radiation from the pair and crosstalk between neighboring pairs and improves rejection of external electromagnetic interference**. It was invented by Alexander Graham Bell.
@@ -679,7 +676,7 @@ The design of more advanced micostrip circuits (e.g. amplifilers) requires an un
 > In electronics, a [Lecher line or Lecher wires](https://en.wikipedia.org/wiki/Lecher_line) is a **pair of parallel wires or rods** that were used to **measure the wavelength of radio waves**, mainly at UHF and microwave frequencies. They form a short length of balanced transmission line (a resonant stub). When attached to a source of radio-frequency power such as a radio transmitter, the radio waves form standing waves along their length.  
 > Commercially available **300 and 450 ohm** twin lead balanced ribbon(n. 带；缎带；带状物；) feeder can be used as a fixed length Lecher line (resonant stub).
 
-IMG!!!
+![TP and Lecher](9/TPandLecher.png)
 
 ### Features
 - Minimal confinement
@@ -688,32 +685,29 @@ IMG!!!
 
 ## Hollow Waveguide [(空腔波导管)](https://en.wikipedia.org/wiki/Waveguide_(radio_frequency))
 
-IMG!!!
-
 ### Features
 - **Low loss, high power**
 - Useable from about 1GHz to 325GHz
 - Complex non-TEM fields
+- “Transverse Electric” mode
 
 ### Rectangular Waveguide (Particular Case)
 Single Metal Pipe;  
 Can not transmit DC as there is no return path for current
 Cut-off frequency: when the width is a half wavelength
 
-IMG!!!
+![Rectangular Waveguide](9/RectangularWaveGuide.png)
 
 > The electromagnetic waves in a (metal-pipe) waveguide may be imagined as travelling down the guide in a zig-zag path, being repeatedly reflected between opposite walls of the guide. For the particular case of rectangular waveguide, it is possible to base an exact analysis on this view. Propagation in a dielectric waveguide may be viewed in the same way, with the waves confined to the dielectric by total internal reflection at its surface.
 
-#### Analogy: Optical Fibre: Based on total internal reflection.
-
-IMG!!!
-
-The complex field pattern is the sum of a pair of waves, each reflecting off the matellic walls at the critical angle.
-
-IMG!!! IMG TE10!!!
 
 ### Frequency bands
 A range of standard waveguide sizes is used to cover the whole microwave and millimetre-wave spectrum.
+
+#### Optical Fibre: Based on total internal reflection.
+
+The complex field pattern is the sum of a pair of waves, each reflecting off the matellic walls at the critical angle.
+
 
 &nbsp;  
 &nbsp;  
@@ -747,7 +741,7 @@ $$fr = \frac{1}{2\pi \sqrt{LC}}$$
 Parallel LC = open circuit at resonance  
 Series LC = short circuit at resonance
 
-*Loading Effect*
+<center style="color:#ef5350;font-size:16pt">Loading Effect</center>
 
 ## Reflections in Trans-Line Resonators
 Energies are stored in L/C. Energy does not disappear. When reach the 'terminals', it propagate back(REFLECTION).
@@ -756,16 +750,17 @@ Reflection Coefficient: $$ \Gamma $$
 
 ### 3 Special Cases
 
-|Open Circuit|Short Circuit|LOAD = $$Z_o$$|
-|---------|---------|---------|
-|CIRCUIT IMG!!!|CIRCUIT IMG!!!|CIRCUIT IMG!!!|
-|$$ \Gamma = +1$$|$$ \Gamma = -1$$|$$ \Gamma = 0$$|
+|Open Circuit|Short Circuit|LOAD = $Z_o$|
+|:---------:|:---------:|:---------:|
+|![OpenCircuit](10/ReflectionOpen.png)|![ShortCircuit](10/ReflectionShort.png)|![MatchedCircuit](10/ReflectionMatched.png)|
+|![OpenSignal](10/ReflectionOpenSignal.png)|![ShortSignal](10/ReflectionShortSignal.png)|·|
+|$\Gamma = +1$|$\Gamma = -1$|$\Gamma = 0$|
 |mag 1, phase 0 degrees|mag 1, phase 180 degrees|mag 0, phase 0 degrees|
 |voltage waves|voltage waves|nothing reflected, a *matched* load|
-|IMG|IMG|IMG|
+|![Opencase](10/Opencase.png)|![Shortcase](10/Shortcase.png)|![50OhmsCase](10/50ohmscase.png) ![75OhmsCase](10/75ohmscase.png)|
 
 ### General Case
-CIRCUIT IMG!!!
+![Reflection General](10/ReflectionGeneral.png)
 
 Reflection Coefficient:  
 
@@ -773,45 +768,43 @@ $$ \Gamma = \frac{\text{reflected}}{\text{incident}}=\frac{Z_L - Z_o}{Z_L + Z_o}
 
 ## Transmission Line Resonators
 
-### Analogy: Organ Pipe
-IMG!!!
-
 ### (Open/Short) Quarter-Wavelength Resonator
 - One end **open circuit**
 - The other end **short circuit**
+- 
+#### Analogy: Organ Pipe
+![Resonator Analogy](10/ResonatorAnalogy.png)
 
-CIRCUIT IMG!!!
-
-IMG!!!
+![Quarter Resonator](10/QuarterResonator.png)
 
 > e.g. Combline Filter(梳状线 滤波器): Mechanical Resonators, Adjust Gaps
 
-Blow too hard and you get harmonics.
+#### Blow too hard and you get harmonics.
 
 $$3\times \frac{\lambda_g}{4}$$
 
-IMG!!! WITH FREQUENCY with lumpped
+![Quarter Harmonics](10/QuarterHarmonics.png)
 
 Lumped elements are unpredictable at High Frequencies.  
 Transmission Lines are predictable; Harmonics can be suppressed.
 
-### Analogy: Waveguide Cavity & Glass Bottle
-IMG!!!
+
 ### (Short/Short) Half-Wavelength Resonator
 - **BOTH** ends are **short circuit**
 
-IMG!!!
+#### Analogy: Waveguide Cavity & Glass Bottle
+![Short Bottle](10/ShortBottle.png)
 
 ### (Open/Open) Half-Wavelength Resonator
 <center>MOST COMMONLY USED in microstrips.</center>
 
 - **BOTH** ends are **open circuit**
 
-IMG!!!
+![Half Resonators](10/HalfResonator.png)
 
 ### Microstrip Resonators
 
-IMG!!!
+![Microstrip Resonator](10/MicrostripResonator.png)
 
 Multiple Resonators coupled together give the desired Bandpass response:  
 But it is subtler than this implies because **the resonators load each other**
@@ -820,8 +813,7 @@ But it is subtler than this implies because **the resonators load each other**
 - It is important that the LOADED Q si not lowered too much by overcoupling
 - Ultimately, the loss in the transmission line determines the highest Q-factor that can be achieved
 
-
-!!!THREE IMGS!!!
+![Bandpasses](10/Bandpasses.png)
 
 ### Dimensions of Resonators
 
@@ -879,6 +871,10 @@ In rectangular waveguides, rectangular mode numbers are designated by two suffix
 In circular waveguides, circular modes exist and here *m* is the number of full-wave patterns along the circumference and *n* is the number of half-wave patterns along the diameter.
 
 
+---
+---
+
+<center>TODO: Add more notes</center>
 
 ---
-<center>TODO: Add more notes</center>
+---
