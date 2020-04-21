@@ -817,7 +817,9 @@ But it is subtler than this implies because **the resonators load each other**
 
 ### Dimensions of Resonators
 
-$$v=f\times \lambda =\frac{c}{\sqrt{\varepsilon_r}}\\ \text{where the }\varepsilon_r\text{is the dielectric constant of microstrip material}$$
+$$v=f\times \lambda =\frac{c}{\sqrt{\varepsilon_r}}$$
+
+where the $$\varepsilon_r$$ is the dielectric constant of microstrip material
 
 Thus, to make a resonator small for given frequency, you need a low velocity.  
 This means a high dielectric constant material is required.
