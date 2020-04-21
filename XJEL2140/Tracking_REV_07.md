@@ -626,7 +626,7 @@ Every L/C component has a self-resonant frequency, beyond which its behaviour is
 > II_Introduction to transmission lines
 
 ## Analogy: Organ pipes
-Speed of Wave: $V=f\lambda$
+Speed of Wave: $$V=f\lambda$$
 
 ## Coaxial Lines
 
@@ -648,7 +648,7 @@ $$ Z_o=\sqrt{\frac{L}{C}}=\frac{377}{2\pi \sqrt{\varepsilon_r}}\ln(\frac{b}{a})\
 > Transmission line on PCB  
 > but for high frequencies, special 'PCB' materials are needed  
 > microstrips are **open circuit** on both sides;  
-> Length of a microstrip: $\lambda_g /2$
+> Length of a microstrip: $$\lambda_g /2$$
 
 ### Field Pattern
 Since the structure is **not symmetrical**, the field pattern is not simple like coax.
@@ -750,11 +750,11 @@ Reflection Coefficient: $$ \Gamma $$
 
 ### 3 Special Cases
 
-|Open Circuit|Short Circuit|LOAD = $Z_o$|
+|Open Circuit|Short Circuit|LOAD = $$Z_o$$|
 |:---------:|:---------:|:---------:|
 |![OpenCircuit](10/ReflectionOpen.png)|![ShortCircuit](10/ReflectionShort.png)|![MatchedCircuit](10/ReflectionMatched.png)|
 |![OpenSignal](10/ReflectionOpenSignal.png)|![ShortSignal](10/ReflectionShortSignal.png)|·|
-|$\Gamma = +1$|$\Gamma = -1$|$\Gamma = 0$|
+|$$\Gamma = +1$$|$$\Gamma = -1$$|$$\Gamma = 0$$|
 |mag 1, phase 0 degrees|mag 1, phase 180 degrees|mag 0, phase 0 degrees|
 |voltage waves|voltage waves|nothing reflected, a *matched* load|
 |![Opencase](10/Opencase.png)|![Shortcase](10/Shortcase.png)|![50OhmsCase](10/50ohmscase.png) ![75OhmsCase](10/75ohmscase.png)|
@@ -821,19 +821,19 @@ $$v=f\times \lambda =\frac{c}{\sqrt{\varepsilon_r}}\\ \text{where the }\varepsil
 
 Thus, to make a resonator small for given frequency, you need a low velocity.  
 This means a high dielectric constant material is required.
-i.e. $\quad\lambda\downarrow;v\downarrow;\varepsilon_r\uparrow$
+i.e. $$\quad\lambda\downarrow;v\downarrow;\varepsilon_r\uparrow$$
 
 #### Example
 
 - Calculate the physical length of a quarter-wavelength coax resonator designed for 
   - a) 10 GHz
   - b) 10 MHz
-- with $\varepsilon_r=10\quad c=3\times10^8 m/s$
+- with $$\varepsilon_r=10\quad c=3\times10^8 m/s$$
 
 Solution:
-- $v=\frac{c}{\sqrt{\varepsilon_r}}=9.4868E+07$
-  - a) $\lambda=v/f=0.00949 \\ \text{Physical length}=\lambda/4=0.00237 m$
-  - b) $\lambda=v/f=9.48683 \\ \text{Physical length}=\lambda/4=2.3717 m$
+- $$v=\frac{c}{\sqrt{\varepsilon_r}}=9.4868E+07$$
+  - a) $$\lambda=v/f=0.00949 \\ \text{Physical length}=\lambda/4=0.00237 m$$
+  - b) $$\lambda=v/f=9.48683 \\ \text{Physical length}=\lambda/4=2.3717 m$$
 
 ## TEM Mode Dielectric Combline
 - Compact Size
