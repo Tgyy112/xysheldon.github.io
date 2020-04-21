@@ -4,7 +4,7 @@ katex: true
 ---
 # <center>XJEL/ELEC2140 Learning Tracking</center>
 ## <center>Yanshan Xie 201199596 2017110397</center>
-### <center>Timestamp: April 17th, 2020</center>
+### <center>Timestamp: April 21th, 2020</center>
 You can receive latest update here: [XJEL2140 Learning Tracking](./XJEL2140_Contents.html)
 
 As the Lecture Captures are my major learning material right now, following table are filled.

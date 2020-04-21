@@ -5,8 +5,8 @@ layout: default
 
 
 # XJEL2140
-XJEL2140 Learning Tracking (Latest Update: April 17th, 2020)
-*   [XJEL2140 Learning Tracking Apr17_2020](./Tracking_REV_07.html)
+XJEL2140 Learning Tracking (Latest Update: April 21th, 2020)
+*   [XJEL2140 Learning Tracking Apr21_2020](./Tracking_REV_07.html)
 *   [XJEL2140 Learning Tracking Apr15_2020](./Tracking_REV_06.html)
 *   [XJEL2140 Learning Tracking Apr10_2020](./Tracking_REV_05.html)
 *   [XJEL2140 Learning Tracking Apr03_2020](./Tracking_REV_04.html)
