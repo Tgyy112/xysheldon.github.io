@@ -4,19 +4,19 @@ katex: true
 ---
 # <center>XJEL/ELEC2140 Learning Tracking</center>
 ## <center>Yanshan Xie 201199596 2017110397</center>
-### <center>Timestamp: May 8th, 2020</center>
+### <center>Timestamp: May 15th, 2020</center>
 You can receive latest update here: [XJEL2140 Learning Tracking](./XJEL2140_Contents.html)
 
 As the Lecture Captures are my major learning material right now, following table are filled.
 
 | Source / Materials | Current Progress | Feedback & Note |
 |:-|:-|:-|:-|
-| Lecture Captures (Videos host on Mediasite) |PP_Measurements| **No nonplus so far** |
-| Lecture Slides | *In sync with lecture captures* | **No nonplus so far** |
+| Lecture Captures (Videos host on Mediasite) | **All Finished** | **No nonplus so far** |
+| Lecture Slides | **All Finished** | **No nonplus so far** |
 | ADS Screencast Tutorials for CAD Sheets | **All Finished** | **No nonplus so far** |
 | PowerPoint Screencasts of the Lectures (in Learning Resources) | **All Finished** | The Screencasts are not compulsory, and some contents are covered in Lecture Captures. ***Planned for Revision.*** |
 | Lab | ***<u>Not started yet</u>*** | ***<u>Not pragmatic now</u>*** |
-| Pre-Lab MCQs | MCQ1 | ***<u>Not pragmatic now</u>*** |
+| Pre-Lab MCQs | MCQ3 | **No nonplus so far** |
 
 ## Detailed Progress
 ### Lecture Captures (Videos host on Mediasite)
@@ -1668,10 +1668,6 @@ Calibration Kit: Shorts, Opens, Loads, Adaptors, Guages, Tape/Disk
 
 
 ![Calibration 1](18/Calibration2.png)
----
----
 
-<center>TODO: Add more notes</center>
 
----
----
+<h1 style="color:#a52070;">The End of Lecture Notes</h1>
