@@ -1640,7 +1640,7 @@ An RF engineer must learn connector skills to get good results.
 
 When screwing connectors together, this outer collar must be rotated whilst(直到……为止) keeping the inner body fixed.If the centre pin rotates, it will get damaged or worn very quickly.
 
-A torque spanner is used to ensure that the connector is always done up with the same tightness, to give a repeatable connection. The outer collar (or nut) must always be done up gently by hand **BEFORE** a torque spanner is applied. If starts with a apanner you can easily cross the threads.
+A torque spanner is used to ensure that the connector is always done up with the same tightness, to give a repeatable connection. The outer collar (or nut) must always be done up gently by hand **BEFORE** a torque spanner is applied. If starts with a spanner you can easily cross the threads.
 
 
 ## Calibration
