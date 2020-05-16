@@ -11,10 +11,16 @@ title: Home Page
 ### [<center>Netease Musician Page</center>](https://music.163.com/#/artist?id=12094050)
 
 &nbsp;
+# Gaming!
+![XJEL 2645 ScreenShot](./XJEL2645/PopKartScreen.jpeg)
+## [XJEL2645 Project: PopKart](./XJEL2645/XJEL2645_Wiki.html)
+#### Click link above to experience my PopKart~
+
+&nbsp;
 
 # Learning Log
 ## [XJEL2140 Learning Tracking](./XJEL2140/XJEL2140_Contents.html)
-#### Clink link above to track my XJEL/ELEC2140 learning~~~
+#### Click link above to track my XJEL/ELEC2140 learning~~~
 
 &nbsp;
 
