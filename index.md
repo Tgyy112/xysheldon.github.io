@@ -3,6 +3,12 @@ layout: default
 title: Home Page
 ---
 
+# XJEL3875
+## [View Project Final Report](./XJEL3875/Report.pdf)
+
+## [View Project Poster](./XJEL3875/Poster.pdf)
+
+&nbsp;
 
 # Gaming!
 ![XJEL 2645 ScreenShot](./XJEL2645/PopKartScreen.jpeg)
